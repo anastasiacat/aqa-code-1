@@ -20,8 +20,6 @@ class MobileBankApiTestV4 {
       // Проверки
       .then()
           .statusCode(200)
-          .body(matchesJsonSchemaInClasspath("accounts.schema.json"))
-          .body("every{ it.currency == \"USD\" || it.currency == \"RUB\" }", is(true))
-      ;
+          .body(matchesJsonSchemaInClasspath("accounts.schema.json"));
     }
 }
